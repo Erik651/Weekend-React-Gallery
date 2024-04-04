@@ -4,6 +4,19 @@ const router = express.Router();
 // PUT /gallery/like/:id
 router.put('/like/:id', (req, res) => {
   // code here
+  console.log('req.body', req.body);
+  console.log('req.params', req.params);
+  let queryText = `
+  UPDATE "gallery" SET "likes" = "likes" +1  WHERE "id" = $1;
+  `;
+  Pool.query(queryText, [req.params.id])
+  .then(() => {
+    res.sendStatus(200);
+  })
+  .catch((error) => {
+    console.log('ERROR in the PUT /like/:id', error);
+    res.sendStatus(500);
+  });
 });
 
 // GET /gallery
