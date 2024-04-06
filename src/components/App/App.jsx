@@ -13,3 +13,39 @@ function App() {
 }
 
 export default App;
+
+
+// const [toggle, setToggle] = useState(false);
+// const switchText = () => {
+//   // if (toggle === true) {
+//   //   return 'Turn Off';
+//   // } else {
+//   //   return 'Turn On';
+//   // } refactor to use a ternary operator
+//   //       if     do this  else  do this
+//   return toggle ? 'Turn Off' : 'Turn On';
+// };
+// return (
+//   <div>
+//     <header>
+//       <h1>Smallest Countries!</h1>
+//     </header>
+//     <button onClick={() => setToggle(!toggle)}>{switchText()}</button>
+//     <div>{`${toggle}`}</div>
+//     <form onSubmit={addCountry}>
+//       <input
+//         type="text"
+//         required
+//         placeholder="country name"
+//         value={name}
+//         onChange={(e) => setName(e.target.value)}
+//       />
+//       <input
+//         type="text"
+//         required
+//         placeholder="continent"
+//         value={continent}
+//         onChange={(e) => setContinent(e.target.value)}
+//       />
+//       <input type="submit" value="Submit" />
+//     </form>
