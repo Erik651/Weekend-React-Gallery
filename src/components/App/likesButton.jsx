@@ -5,7 +5,7 @@ import axios from "axios";
 
 
 
-function likesButton() {
+function LikesButton() {
   const [likes, setLikes] = useState(0);
   const [likesCount, setLikesCount] = useState([]);
 
@@ -54,4 +54,4 @@ function likesButton() {
   
 }
 
-export default likesButton;
+export default LikesButton;

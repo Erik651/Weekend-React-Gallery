@@ -1,4 +1,6 @@
 
+
+import GalleryItem from "./GalleryItem";
 function App() {
     return (
       <div>
@@ -7,6 +9,7 @@ function App() {
         </header>
 
         <p>The gallery goes here!</p>
+        <GalleryItem />
         <img src="images/goat_small.jpg"/>
       </div>
     );

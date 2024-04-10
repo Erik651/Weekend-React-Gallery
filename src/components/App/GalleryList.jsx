@@ -1,4 +1,4 @@
-function galleryList({galleryList}) {
+function GalleryList({galleryList}) {
 
   let [galleryList, setGalleryList] = useState([]);
 
@@ -22,8 +22,8 @@ function galleryList({galleryList}) {
       <ul data-testid="galleryList">
         <h2>Gallery List</h2>
         <ul>
-        {galleryList.map((galleyImage) => (
-          <GalleryItem key={galleryImage.id}
+        {galleryList.map((galley) => (
+          <GalleryItem key={gallery.id}
           gallery={gallery} />
         ))};
 </ul>
@@ -35,7 +35,7 @@ function galleryList({galleryList}) {
 
 }
 
-export default galleryList;
+export default GalleryList;
 
 
 
