@@ -1,22 +1,21 @@
-
-
-import GalleryItem from "./GalleryItem";
+import LikesButton from './LikesButton';
+import GalleryList from './GalleryList';
 function App() {
-    return (
-      <div>
-        <header>
-          <h1>React Gallery</h1>
-        </header>
+  return (
+    <div>
+      <header>
+        <h1>React Gallery</h1>
+      </header>
 
-        <p>The gallery goes here!</p>
-        <GalleryItem />
-        <img src="images/goat_small.jpg"/>
-      </div>
-    );
+      <p>The gallery goes here!</p>
+      <GalleryList />
+      {/* <LikesButton /> */}
+      {/* <img src="images/goat_small.jpg"/> */}
+    </div>
+  );
 }
 
 export default App;
-
 
 // const [toggle, setToggle] = useState(false);
 // const switchText = () => {
