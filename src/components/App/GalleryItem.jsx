@@ -18,7 +18,7 @@ function GalleryItem({ gallery, getGalleryList }) {
       {/* //{toggle ? gallery.image : gallery.text} */}
       {/* {JSON.stringify(gallery)} */}
        {/* <img src={gallery.url} />  */}
-       {toggle ? (<Box component="section" sx={{ p:2 }}> src={gallery.url} </Box>) : (<Box component="section" sx={{ p:2 }}> {gallery.description}</Box>)}
+       {toggle ? (<Box component="section" sx={{ p:2 }}><img src={gallery.url}></img> </Box>) : (<Box component="section" sx={{ p:2 }}> {gallery.description}</Box>)}
       <LikesButton galleryItem={gallery} getGalleryList={getGalleryList} />
     </li>
   );
