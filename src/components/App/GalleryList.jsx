@@ -22,8 +22,8 @@ function GalleryList() {
   };
 
   return (
-    <>
-      <div>
+    
+      
         <ul data-testid="galleryList">
           <h2>Gallery List</h2>
           <ul>
@@ -34,11 +34,11 @@ function GalleryList() {
                 getGalleryList={getGalleryList}
               />
             ))}
-            ;
+            
           </ul>
         </ul>
-      </div>
-    </>
+      
+    
   );
 }
 

@@ -1,4 +1,3 @@
-import LikesButton from './LikesButton';
 import GalleryList from './GalleryList';
 function App() {
   return (

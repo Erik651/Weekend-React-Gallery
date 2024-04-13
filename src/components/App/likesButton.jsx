@@ -28,14 +28,16 @@ function LikesButton({ galleryItem, getGalleryList }) {
   // useEffect(() => {
   //   getLikes();
   // }, []);
+  //console.log('Like add', likes);
+  //const data = {likes: likes};
 
   const sendLikesToServer = (e) => {
+    console.log('button click')
     e.preventDefault();
-    // console.log('Like add', likes);
-    //const data = {likes: likes};
     axios
       .put(`/api/gallery/like/${galleryItem.id}`)
       .then((response) => {
+        console.log("test")
         getGalleryList();
       })
       .catch((error) => {
@@ -46,7 +48,7 @@ function LikesButton({ galleryItem, getGalleryList }) {
 
   return (
     <button value={galleryItem.likes} onClick={sendLikesToServer}>
-      Smash Like! {galleryItem.likes}
+      Liked Button Smashed {galleryItem.likes} Times!!
     </button>
   );
 }
