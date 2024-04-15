@@ -4,49 +4,59 @@ import Box from '@mui/material/Box';
 //import Image from '@mui/material/Image'
 import Container from '@mui/material/Container';
 
-
 function GalleryItem({ gallery, getGalleryList }) {
   // YES! This should be in state
   const [toggle, setToggle] = useState(false);
 
   const handleClick = () => {
     {
-      setToggle(toggleState => !toggleState);
-      console.log('Toggle is-', toggle)
+      setToggle((toggleState) => !toggleState);
+      console.log('Toggle is-', toggle);
     }
   };
   return (
-    <Container maxWidth="xl" onClick={handleClick} data-testid="galleryItem">
-      {/* //{toggle ? gallery.image : gallery.text} */}
-      {/* {JSON.stringify(gallery)} */}
-       {/* <img src={gallery.url} />  */}
-       {toggle ? (<Box
-        height={100}
-        width={100}
-        my={4}
-        p={1}
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-        sx={{ border: '2px solid grey' }}
-      >
-        <img src={gallery.url} alt="Gallery" height={100} width={100} />
-      </Box> ) : (<Box
-      height={100}
-      width={100}
-      my={4}
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
-      p={1}
-      sx={{ border: '2px solid grey' }}> {gallery.description}</Box>)}
+    <>
+      <Container maxWidth="xl" data-testid="galleryItem">
+        {/* //{toggle ? gallery.image : gallery.text} */}
+        {/* {JSON.stringify(gallery)} */}
+        {/* <img src={gallery.url} />  */}
+        {toggle ? (
+          <Box
+            onClick={handleClick}
+            height={100}
+            width={100}
+            my={4}
+            p={10}
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            sx={{ border: '2px solid grey' }}
+          >
+            <img src={gallery.url} alt="Gallery" height={100} width={100} />
+          </Box>
+        ) : (
+          <Box
+            onClick={handleClick}
+            height={100}
+            width={100}
+            my={4}
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            p={1}
+            sx={{ border: '2px solid grey' }}
+          >
+            {' '}
+            {gallery.description}
+          </Box>
+        )}
+      </Container>
       <LikesButton galleryItem={gallery} getGalleryList={getGalleryList} />
-    </Container>
+    </>
   );
 }
 
 export default GalleryItem;
- 
 
 // function GalleryItem({ gallery, getGalleryList }) {
 //   const [toggle, setToggle] = useState(false);

@@ -28,7 +28,7 @@ function GalleryList() {
           <h2>Gallery List</h2>
           <ul>
             {galleryList.map((gallery) => (
-              <GalleryItem
+              <GalleryItem data-testid="galleryItem"
                 key={gallery.id}
                 gallery={gallery}
                 getGalleryList={getGalleryList}
