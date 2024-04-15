@@ -1,6 +1,8 @@
 import LikesButton from './LikesButton';
 import { useState } from 'react';
 import Box from '@mui/material/Box';
+//import Image from '@mui/material/Image'
+import Container from '@mui/material/Container';
 
 
 function GalleryItem({ gallery, getGalleryList }) {
@@ -14,18 +16,36 @@ function GalleryItem({ gallery, getGalleryList }) {
     }
   };
   return (
-    <li onClick={handleClick} data-testid="galleryItem">
+    <Container maxWidth="xl" onClick={handleClick} data-testid="galleryItem">
       {/* //{toggle ? gallery.image : gallery.text} */}
       {/* {JSON.stringify(gallery)} */}
        {/* <img src={gallery.url} />  */}
-       {toggle ? (<Box height={100} width={100} sx={{ p:2 }}><img src={gallery.url}></img> </Box>) : (<Box height={100} width={100} sx={{ p:2 }}> {gallery.description}</Box>)}
+       {toggle ? (<Box
+        height={100}
+        width={100}
+        my={4}
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        sx={{ border: '2px solid grey' }}
+      >
+        <img src={gallery.url} alt="Gallery" height={100} width={100} />
+      </Box> ) : (<Box
+      height={100}
+      width={100}
+      my={4}
+      display="flex"
+      alignItems="center"
+      gap={4}
+      p={2}
+      sx={{ border: '2px solid grey' }}> {gallery.description}</Box>)}
       <LikesButton galleryItem={gallery} getGalleryList={getGalleryList} />
-    </li>
+    </Container>
   );
 }
 
 export default GalleryItem;
-
+ 
 
 // function GalleryItem({ gallery, getGalleryList }) {
 //   const [toggle, setToggle] = useState(false);

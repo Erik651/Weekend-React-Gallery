@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import Button from '@mui/material/Button';
 
 function LikesButton({ galleryItem, getGalleryList }) {
   // const [likes, setLikes] = useState(0);
