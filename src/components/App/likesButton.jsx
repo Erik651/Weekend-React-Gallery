@@ -47,10 +47,12 @@ function LikesButton({ galleryItem, getGalleryList }) {
       });
   };
 
-  return (
+  return (<>
     <button value={galleryItem.likes} onClick={sendLikesToServer}>
-      Liked Button Smashed {galleryItem.likes} Times!!
+    Click to Like
     </button>
+    <h3>Liked Button Smashed {galleryItem.likes} Times!!</h3>
+    </>
   );
 }
 

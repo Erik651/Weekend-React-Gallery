@@ -24,6 +24,7 @@ function GalleryItem({ gallery, getGalleryList }) {
         height={100}
         width={100}
         my={4}
+        p={1}
         display="flex"
         alignItems="center"
         justifyContent="center"
@@ -36,8 +37,8 @@ function GalleryItem({ gallery, getGalleryList }) {
       my={4}
       display="flex"
       alignItems="center"
-      gap={4}
-      p={2}
+      justifyContent="center"
+      p={1}
       sx={{ border: '2px solid grey' }}> {gallery.description}</Box>)}
       <LikesButton galleryItem={gallery} getGalleryList={getGalleryList} />
     </Container>
