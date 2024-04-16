@@ -3,10 +3,11 @@ import { useState } from 'react';
 import Box from '@mui/material/Box';
 //import Image from '@mui/material/Image'
 import Container from '@mui/material/Container';
+//import Grid from '@mui/material/'
 
 function GalleryItem({ gallery, getGalleryList }) {
   // YES! This should be in state
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
 
   const handleClick = () => {
     {
@@ -15,44 +16,42 @@ function GalleryItem({ gallery, getGalleryList }) {
     }
   };
   return (
-    <>
-      <Container maxWidth="xl" data-testid="galleryItem">
-        {/* //{toggle ? gallery.image : gallery.text} */}
-        {/* {JSON.stringify(gallery)} */}
-        {/* <img src={gallery.url} />  */}
-        {toggle ? (
-          <Box
-            onClick={handleClick}
-            height={100}
-            width={100}
-            my={4}
-            p={10}
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            sx={{ border: '2px solid grey' }}
-          >
-            <img src={gallery.url} alt="Gallery" height={100} width={100} />
-          </Box>
-        ) : (
-          <Box
-            onClick={handleClick}
-            height={100}
-            width={100}
-            my={4}
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            p={1}
-            sx={{ border: '2px solid grey' }}
-          >
-            {' '}
-            {gallery.description}
-          </Box>
-        )}
-      </Container>
+    <Box sx={{ padding: '10px' }}>
+      {/* //{toggle ? gallery.image : gallery.text} */}
+      {/* {JSON.stringify(gallery)} */}
+      {/* <img src={gallery.url} />  */}
+      {toggle ? (
+        <Box
+          onClick={handleClick}
+          height={200}
+          width={200}
+          // my={4}
+          // p={1}
+          // display="flex"
+          // flexDirection= "row"
+          //alignItems="center"
+          //justifyContent="center"
+          sx={{ border: '2px solid grey' }}
+        >
+          <img src={gallery.url} alt="Gallery" height={200} width={200} />
+        </Box>
+      ) : (
+        <Box
+          onClick={handleClick}
+          height={200}
+          width={200}
+          // my={4}
+          //alignItems="center"
+          //justifyContent="center"
+          // p={1}
+          sx={{ border: '2px solid grey' }}
+        >
+          {' '}
+          {gallery.description}
+        </Box>
+      )}
       <LikesButton galleryItem={gallery} getGalleryList={getGalleryList} />
-    </>
+    </Box>
   );
 }
 

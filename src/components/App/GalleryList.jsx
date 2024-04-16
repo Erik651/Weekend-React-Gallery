@@ -1,6 +1,7 @@
 import GalleryItem from './GalleryItem';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import Container from '@mui/material/Container';
 
 function GalleryList() {
   let [galleryList, setGalleryList] = useState([]);
@@ -22,23 +23,27 @@ function GalleryList() {
   };
 
   return (
-    
-      
-        <ul data-testid="galleryList">
-          <h2>Gallery List</h2>
-          <ul>
-            {galleryList.map((gallery) => (
-              <GalleryItem data-testid="galleryItem"
-                key={gallery.id}
-                gallery={gallery}
-                getGalleryList={getGalleryList}
-              />
-            ))}
-            
-          </ul>
-        </ul>
-      
-    
+    <Container data-testid="galleryList">
+      <h2>Gallery List</h2>
+      <Container
+        maxWidth="xl"
+        sx={{
+          backgroundColor: 'lightblue',
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+        }}
+      >
+        {galleryList.map((gallery) => (
+          <GalleryItem
+            data-testid="galleryItem"
+            key={gallery.id}
+            gallery={gallery}
+            getGalleryList={getGalleryList}
+          />
+        ))}
+      </Container>
+    </Container>
   );
 }
 
