@@ -2,7 +2,7 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-
+import Header from './Header'
 
 
 
@@ -10,9 +10,7 @@ import GalleryList from './GalleryList';
 function App() {
   return (
     <div>
-      <header>
-        <h1>React Gallery</h1>
-      </header>
+      <Header />
 
       <p>The gallery goes here!</p>
       <GalleryList />
