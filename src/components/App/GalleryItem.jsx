@@ -2,8 +2,9 @@ import LikesButton from './LikesButton';
 import { useState } from 'react';
 import Box from '@mui/material/Box';
 //import Image from '@mui/material/Image'
-import Container from '@mui/material/Container';
+//import Container from '@mui/material/Container';
 //import Grid from '@mui/material/'
+import DeleteButton from '../DeleteButton';
 
 function GalleryItem({ gallery, getGalleryList }) {
   // YES! This should be in state
@@ -51,6 +52,7 @@ function GalleryItem({ gallery, getGalleryList }) {
         </Box>
       )}
       <LikesButton galleryItem={gallery} getGalleryList={getGalleryList} />
+      <DeleteButton galleryItem={gallery} getGalleryList={getGalleryList} />
     </Box>
   );
 }
